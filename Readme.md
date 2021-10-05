@@ -36,6 +36,8 @@
 
 5. The JS team wanted to encapsulate or standaradized this idea of an object that represents a future value.
 
+6. The inbuilt promise object is designed in such a way that when it's "value" property get's filled in then it's gonna trigger all the functions in the onfulfillment array.
+
 ## Custom Promise
 
 1. We will give our promise a **_ executor _** function , this function will do the work we are talking about. For eg - fetch data from api or setTimout.
