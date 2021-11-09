@@ -2,9 +2,9 @@ fetch('https://quick-access-api.desaihetav.repl.co/')
   .then(response => response.json())
   .then(data => console.log(data));
 
-// fetch returns a promise i.e an object built into JS that knows how to deal with asynchronous events and callbacks
+// fetch(a two pronged facade function) returns a promise i.e an object built into JS that knows how to deal with asynchronous events and callbacks
 // I will have a '.then' and I will be able to use the special kind of object that comes along with fetch for handling response i.e a stream of data
-// And on that resonse I can call .json().
+// And on that response I can call .json().
 // response.json() does return a promise as well (as it waits for the body to load)
 // .json() returns a PROMISE
 // and so I can use .then to get the final result.

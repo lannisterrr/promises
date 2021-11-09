@@ -8,6 +8,7 @@ function customPromise(executor) {
   let handlers = [];
   let catches = [];
 
+  // here result can be - data from an api and shit.
   function resolve(result) {
     if (state !== PENDING) return;
     state = FULFILLED;
@@ -25,6 +26,7 @@ function customPromise(executor) {
     catches.forEach(c => c(err));
   }
 
+  // .then does one thing - push the function in the handlers array.
   this.then = function (callback) {
     if (state === FULFILLED) {
       callback(value);

@@ -26,6 +26,7 @@ doAllWork();
 console.log('Done!');
 
 /**
+ * Async functions always return a promise
  * Async function tells the JS engine to 'await' for one thing inside this engine and we are awaitng a "Promise"
  * When the JS engine reaches this await keyword, the execution context is paused
  * in other words , it is set aside , and regular function invokation and execution continues and that will sit there untill the promise being awaited for 'resolves'.
