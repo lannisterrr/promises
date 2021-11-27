@@ -59,3 +59,36 @@
 1. An object that has a "then" function.
 2. So that we can use thie .then .then .then coding structure
 3. Suppose we are using utility or an object that is not a promise but if that function follows the pattern of how to ".then" function works that it's thenable
+
+## 'chaining' Promises
+
+1. The  only point of chaining a promise comes into picture is when you want to return a promise inside a '.then'.
+2. And you want to run that promise that is inside the '.then' after the first promise is resolved .
+
+```javascript
+// Create a Promise
+let getUser = new Promise(function(resolve, reject) {
+    const user = { 
+           name: 'John Doe', 
+           email: 'jdoe@email.com', 
+           password: 'jdoe.password' 
+     };
+   resolve(user);
+});
+
+getUser
+.then(function(user) {
+    console.log(`Got user ${user.name}`);
+    // Return a Promise
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            // Fetch address of the user based on email
+            resolve('Bangalore');
+         }, 1000);
+    });
+})
+.then(function(address) {
+    console.log(`User address is ${address}`);
+});
+
+```
