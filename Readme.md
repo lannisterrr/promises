@@ -55,9 +55,9 @@
 2. **_ IMP _** - Just when you see that somehthing returns a promise , think of .then to get the resolved or the fianl value and .catch for error.
 
 ## "thennable" object
-
+# To be precise, a handler may return not exactly a promise, but a so-called “thenable” object – an arbitrary object that has a method .then. It will be treated the same way as a promise. So calling .then doesn't always returns a promise.
 1. An object that has a "then" function.
-2. So that we can use thie .then .then .then coding structure
+2. So that we can use the .then .then .then coding structure
 3. Suppose we are using utility or an object that is not a promise but if that function follows the pattern of how to ".then" function works that it's thenable
 
 ## 'chaining' Promises
